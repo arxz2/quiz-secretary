@@ -3,7 +3,10 @@ name: Run Python Script Periodically
 on:
   workflow_dispatch:  # Триггер для ручного запуска
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "*/5 * * * *"
+
+permissions:
+  contents: write  # разрешение на запись в репозиторий
 
 jobs:
   run-script:
