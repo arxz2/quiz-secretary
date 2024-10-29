@@ -2,7 +2,7 @@ name: Run Python Script Periodically
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Запуск каждый день в полночь по UTC
+    - cron: "0 * * * *"
 
 jobs:
   run-script:
@@ -11,9 +11,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          persist-credentials: true  # Оставить токен для коммитов
+          fetch-depth: 0  # Полная история коммитов для переключения веток
 
       - name: Set up Python
         uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
 
       - name: Install dependencies
         run: |
@@ -21,4 +26,17 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run Python Script
-        run: python checker.py 
+        run: python checker.py ${{ secrets.TOKEN }} ${{ secrets.CHAT_ID }}
+
+      - name: Commit and push results
+        run: |
+          # Настраиваем git
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Добавляем изменения и коммитим их
+          git add games.txt
+          git commit -m "Обновление результатов работы скрипта" || echo "No changes to commit"
+
+          # Пушим изменения в ту же ветку
+          git push origin ${{ github.ref }}  # ${{ github.ref }} — это текущая ветка
