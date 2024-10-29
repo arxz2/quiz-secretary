@@ -2,7 +2,7 @@ name: Run Python Script Periodically
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "* */3 * * *"
 
 permissions:
   contents: write  # разрешение на запись в репозиторий

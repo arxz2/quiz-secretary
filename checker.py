@@ -32,8 +32,8 @@ filename.touch(exist_ok=True)
 with open(filename, "r+") as f:
     lines = f.read().splitlines()
     for game in games:
-        # if game in lines:
-        #     continue
+        if game in lines:
+            continue
         msg = f"ЗАПИШИСЬ БЛЯТЬ НА ИГРУ!\nhttps://quizplease.ru/game-page?id={game}"
         print(f"Game found: https://quizplease.ru/game-page?id={game}")
         
