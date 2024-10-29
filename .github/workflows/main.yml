@@ -36,7 +36,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
           # Добавляем изменения и коммитим их
-          git add games.txt
+          git add games.txt -f
           git commit -m "Обновление результатов работы скрипта" || echo "No changes to commit"
 
           # Пушим изменения в ту же ветку
