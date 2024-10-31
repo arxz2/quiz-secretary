@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data Display</title>
+</head>
+<body>
+    <h1>JSON Data</h1>
+    <pre id="json-data">Loading data...</pre>
+
+    <script>
+        // URL к JSON файлу
+        const jsonUrl = 'https://arxz2.github.io/quiz-secretary/games.json';
+
+        fetch(jsonUrl)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('json-data').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error('Error loading JSON:', error);
+                document.getElementById('json-data').textContent = 'Error loading data';
+            });
+    </script>
+</body>
+</html>
