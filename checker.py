@@ -21,7 +21,6 @@ chat_id = args.chatId
 group_id = args.groupId
 
 current_date = datetime.now()
-current_date = datetime(2024, 11, 8)
 
 r = requests.get(url + "schedule")
 soup = BeautifulSoup(r.text, "html.parser")
@@ -104,7 +103,7 @@ def send_poll(receiver, question, options):
 
 filename = Path(data_file)
 filename.touch(exist_ok=True)
-with open(filename, "r+") as f:
+with open(filename, "r+", encoding="utf-8") as f:
     try:
         saved_data = json.load(f)
     except:
@@ -142,7 +141,7 @@ with open(filename, "r+") as f:
                 data[game_id]["notified"] = True
             continue
 
-        cur_game = {"standard": False, "poll_id": 0, "notified": False}
+        cur_game = {"name": game_name, "date_str": game_date_str, "date": game_date.isoformat(), "standard": False, "poll_id": 0, "notified": False}
         data[game_id] = cur_game
 
         if game_date == 0:
@@ -165,4 +164,4 @@ with open(filename, "r+") as f:
 
     f.truncate(0)
     f.seek(0)
-    json.dump(data, f)
+    json.dump(data, f, ensure_ascii=False)
