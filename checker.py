@@ -164,4 +164,4 @@ with open(filename, "r+", encoding="utf-8") as f:
 
     f.truncate(0)
     f.seek(0)
-    json.dump(data, f, ensure_ascii=False)
+    json.dump(data, f, ensure_ascii=False, indent=4)
