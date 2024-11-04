@@ -41,7 +41,6 @@ months = {
 }
 
 def parse_date(date_str):
-        current_date = datetime.now()
         try:
             parts = date_str.split(" ", 2)
             day = int(parts[0])
@@ -124,7 +123,7 @@ with open(filename, "r+", encoding="utf-8") as f:
             if cur_game.get("notified", False):
                 continue
             
-            if (game_date - current_date).days <= 2:
+            if (game_date - current_date).days <= 1:
                 if cur_game['standard']:
                     question = f"Игра совсем скоро!\n{game_name} {game_number}\n{game_date_str}, {game_location}"
                     msg = f"{url}/game-page?id={game_id}"
