@@ -1,1 +1,26 @@
-{}
+{
+    "90238": {
+        "name": "Квиз, плиз! BEG",
+        "date_str": "14 ноября, Четверг",
+        "date": "2024-11-14T00:00:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
+    },
+    "90636": {
+        "name": "Квиз, плиз! BEG",
+        "date_str": "21 ноября, Четверг",
+        "date": "2024-11-21T00:00:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
+    },
+    "90637": {
+        "name": "[music party] 90-х BEG",
+        "date_str": "23 ноября, Суббота",
+        "date": "2024-11-23T00:00:00",
+        "standard": false,
+        "poll_id": 5234,
+        "notified": false
+    }
+}
