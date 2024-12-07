@@ -1,10 +1,10 @@
 {
-    "91685": {
-        "name": "[ностальжи] BEG",
-        "date_str": "7 декабря, Суббота",
-        "date": "2024-12-07T00:00:00",
-        "standard": false,
-        "poll_id": 5353,
-        "notified": true
+    "92419": {
+        "name": "Квиз, плиз! BEG",
+        "date_str": "12 декабря, Четверг",
+        "date": "2024-12-12T00:00:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
     }
 }
