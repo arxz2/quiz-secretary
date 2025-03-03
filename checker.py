@@ -115,6 +115,10 @@ with open(filename, "r+", encoding="utf-8") as f:
         game_name = game.select_one(".schedule-block-head .h2-game-card.h2-left").get_text(strip=True) 
         game_number = game.select_one(".schedule-block-head .h2-game-card:not(.h2-left)").get_text(strip=True)
         game_location = game.select_one(".schedule-block-info-bar").get_text(strip=True)
+        time_text = ''
+        time_info = soup.select_one(".schedule-info img[src*='time-halfwhite.svg']")
+        if time_info:
+             time_text = ' ' + time_info.find_next_sibling("div").get_text(strip=True)
         game_date = parse_date(game_date_str)
 
         cur_game = saved_data.get(game_id, None)
@@ -125,7 +129,7 @@ with open(filename, "r+", encoding="utf-8") as f:
             
             if (game_date - current_date).days <= 1:
                 if cur_game['standard']:
-                    question = f"Игра совсем скоро!\n{game_name} {game_number}\n{game_date_str}, {game_location}"
+                    question = f"Игра совсем скоро!\n{game_name} {game_number}\n{game_date_str}{time_text}, {game_location}"
                     msg = f"{url}/game-page?id={game_id}"
 
                     options = ["Иду", "Иду +1", "Не иду", "Посмотреть ответы"]
@@ -149,12 +153,12 @@ with open(filename, "r+", encoding="utf-8") as f:
             continue
 
         if "Четверг" in game_date_str:
-            msg = f"Запишись на игру!\n{game_date_str}, {game_name} {game_number}\n{url}/game-page?id={game_id}"
+            msg = f"Запишись на игру!\n{game_date_str}{time_text}, {game_name} {game_number}\n{url}/game-page?id={game_id}"
             data[game_id]["standard"] = True
             send_msg(chat_id, msg)
             
         else:
-            question = f"{game_name} {game_number}\n{game_date_str}, {game_location}"
+            question = f"{game_name} {game_number}\n{game_date_str}{time_text}, {game_location}"
             msg = f"{url}/game-page?id={game_id}"
 
             options = ["Иду", "Иду +1", "Не иду", "Посмотреть ответы"]
