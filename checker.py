@@ -116,7 +116,7 @@ with open(filename, "r+", encoding="utf-8") as f:
         game_number = game.select_one(".schedule-block-head .h2-game-card:not(.h2-left)").get_text(strip=True)
         game_location = game.select_one(".schedule-block-info-bar").get_text(strip=True)
         time_text = ''
-        time_info = soup.select_one(".schedule-info img[src*='time-halfwhite.svg']")
+        time_info = game.select_one(".schedule-info img[src*='time-halfwhite.svg']")
         if time_info:
              time_text = ' ' + time_info.find_next_sibling("div").get_text(strip=True)
         game_date = parse_date(game_date_str)
