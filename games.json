@@ -1,1 +1,10 @@
-{}
+{
+    "102062": {
+        "name": "Квиз, плиз! BEG",
+        "date_str": "24 апреля, Четверг",
+        "date": "2025-04-24T00:00:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
+    }
+}
