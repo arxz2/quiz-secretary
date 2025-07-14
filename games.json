@@ -1,1 +1,10 @@
-{}
+{
+    "107895": {
+        "name": "Квиз, плиз! BEG",
+        "date_str": "17 июля, Четверг",
+        "date": "2025-07-17T00:00:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
+    }
+}
