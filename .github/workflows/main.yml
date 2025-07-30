@@ -3,6 +3,7 @@ name: Run Python Script Periodically
 on:
   schedule:
     - cron: "0 7,10,13,16,18,21 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write  # разрешение на запись в репозиторий
