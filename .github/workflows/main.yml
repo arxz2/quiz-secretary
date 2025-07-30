@@ -38,9 +38,8 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
           # Добавляем изменения и коммитим их
-          git pull
           git add games.json
           git commit -m "Updated by script" || echo "No changes to commit"
 
           # Пушим изменения в ту же ветку
-          git push origin ${{ github.ref }}  # ${{ github.ref }} — это текущая ветка
+          git push --force origin ${{ github.ref }}  # ${{ github.ref }} — это текущая ветка
