@@ -38,6 +38,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
           # Добавляем изменения и коммитим их
+          git pull
           git add games.json
           git commit -m "Updated by script" || echo "No changes to commit"
 
