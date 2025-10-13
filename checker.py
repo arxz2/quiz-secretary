@@ -152,7 +152,7 @@ with open(filename, "r+", encoding="utf-8") as f:
             send_msg(chat_id, msg)
             continue
 
-        if "Четверг" in game_date_str:
+        if "Вторник" in game_date_str:
             msg = f"Запишись на игру!\n{game_date_str}{time_text}, {game_name} {game_number}\n{url}/game-page?id={game_id}"
             data[game_id]["standard"] = True
             send_msg(chat_id, msg)
