@@ -30,6 +30,9 @@ try:
 except:
     sys.exit(0)
 
+if games == []:
+    sys.exit(0)
+
 months = {
     "января": 1,
     "февраля": 2,
