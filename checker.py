@@ -1,6 +1,6 @@
 import json
 import http.client
-import requests
+import sys, requests
 import argparse
 from bs4 import BeautifulSoup
 from pathlib import Path
@@ -22,9 +22,14 @@ group_id = args.groupId
 
 current_date = datetime.now()
 
-r = requests.get(url + "schedule")
-soup = BeautifulSoup(r.text, "html.parser")
-games = soup.select("div.schedule-column")
+try:
+    r = requests.get(url + "schedule")
+
+    soup = BeautifulSoup(r.text, "html.parser")
+    games = soup.select("div.schedule-column")
+except:
+    sys.exit(0)
+
 months = {
     "января": 1,
     "февраля": 2,
