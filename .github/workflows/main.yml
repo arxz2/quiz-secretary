@@ -1,8 +1,9 @@
 name: Run Python Script Periodically
 
 on:
-  schedule:
-    - cron: "0 10,15,20 * * *"
+  # скрипт отключен
+  # schedule:
+  #  - cron: "0 10,15,20 * * *"
   workflow_dispatch:
 
 permissions:
