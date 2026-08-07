@@ -1,10 +1,26 @@
 {
-    "116488": {
-        "name": "[топовые видеоигры] BEG",
-        "date_str": "25 ноября, Вторник",
-        "date": "2025-11-25T00:00:00",
+    "019fa938-3a2b-73bb-ab8d-e6c9cc924e6f": {
+        "name": "[music party] BEG",
+        "date_str": "11 августа, Вторник",
+        "date": "2026-08-11T19:30:00",
         "standard": true,
         "poll_id": 0,
-        "notified": true
+        "notified": false
+    },
+    "019fa930-b82f-7012-b191-7846248a8912": {
+        "name": "Квиз, плиз! BEG",
+        "date_str": "18 августа, Вторник",
+        "date": "2026-08-18T19:30:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
+    },
+    "019fa93a-ebcc-71fa-9887-50d458da501b": {
+        "name": "[мемы и приколы] BEG",
+        "date_str": "25 августа, Вторник",
+        "date": "2026-08-25T19:30:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
     }
 }
