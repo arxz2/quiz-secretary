@@ -1,10 +1,74 @@
 {
-    "019fa93a-ebcc-71fa-9887-50d458da501b": {
-        "name": "[мемы и приколы] BEG",
-        "date_str": "25 августа, Вторник",
-        "date": "2026-08-25T19:30:00",
+    "01a03981-802d-735b-bda4-04365be4e937": {
+        "name": "Квиз, плиз! BEG",
+        "date_str": "1 сентября, Вторник",
+        "date": "2026-09-01T19:30:00",
         "standard": true,
         "poll_id": 0,
-        "notified": true
+        "notified": false
+    },
+    "01a03984-b455-717c-9027-009f30643d2d": {
+        "name": "[рок vs попса] BEG",
+        "date_str": "5 сентября, Суббота",
+        "date": "2026-09-05T16:00:00",
+        "standard": false,
+        "poll_id": 8385,
+        "notified": false
+    },
+    "01a03988-2e7c-7280-b7ff-819cf2731dc1": {
+        "name": "[кино и музыка] BEG",
+        "date_str": "8 сентября, Вторник",
+        "date": "2026-09-08T19:30:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
+    },
+    "01a0398b-d6b4-735f-95aa-ed3d985bee86": {
+        "name": "[зумеры vs бумеры] BEG",
+        "date_str": "12 сентября, Суббота",
+        "date": "2026-09-12T16:00:00",
+        "standard": false,
+        "poll_id": 8386,
+        "notified": false
+    },
+    "01a0398e-8163-7029-884c-62fefc8d91e7": {
+        "name": "Квиз, плиз! BEG",
+        "date_str": "15 сентября, Вторник",
+        "date": "2026-09-15T19:30:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
+    },
+    "01a03990-f574-713f-86aa-d72deae72241": {
+        "name": "[киномания] BEG",
+        "date_str": "19 сентября, Суббота",
+        "date": "2026-09-19T16:00:00",
+        "standard": false,
+        "poll_id": 8387,
+        "notified": false
+    },
+    "01a03993-1acb-71c3-b195-d3004b90a24b": {
+        "name": "[верните мой 2007] BEG",
+        "date_str": "22 сентября, Вторник",
+        "date": "2026-09-22T19:30:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
+    },
+    "01a03995-fef4-7251-b4b6-5e446cee0b4b": {
+        "name": "[кино и TV] 2000-е BEG",
+        "date_str": "26 сентября, Суббота",
+        "date": "2026-09-26T16:00:00",
+        "standard": false,
+        "poll_id": 8388,
+        "notified": false
+    },
+    "01a03998-e9c8-726a-b011-355fc3964032": {
+        "name": "Квиз, плиз! BEG",
+        "date_str": "29 сентября, Вторник",
+        "date": "2026-09-29T19:30:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
     }
 }
