@@ -1,19 +1,11 @@
 {
-    "01a0398b-d6b4-735f-95aa-ed3d985bee86": {
-        "name": "[зумеры vs бумеры] BEG",
-        "date_str": "12 сентября, Суббота",
-        "date": "2026-09-12T16:00:00",
-        "standard": false,
-        "poll_id": 8386,
-        "notified": true
-    },
     "01a0398e-8163-7029-884c-62fefc8d91e7": {
         "name": "Квиз, плиз! BEG",
         "date_str": "15 сентября, Вторник",
         "date": "2026-09-15T19:30:00",
         "standard": true,
         "poll_id": 0,
-        "notified": false
+        "notified": true
     },
     "01a03990-f574-713f-86aa-d72deae72241": {
         "name": "[киномания] BEG",
