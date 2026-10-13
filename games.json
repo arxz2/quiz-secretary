@@ -1,10 +1,42 @@
 {
-    "116488": {
-        "name": "[топовые видеоигры] BEG",
-        "date_str": "25 ноября, Вторник",
-        "date": "2025-11-25T00:00:00",
+    "01a0398e-8163-7029-884c-62fefc8d91e7": {
+        "name": "Квиз, плиз! BEG",
+        "date_str": "15 сентября, Вторник",
+        "date": "2026-09-15T19:30:00",
         "standard": true,
         "poll_id": 0,
         "notified": true
+    },
+    "01a03990-f574-713f-86aa-d72deae72241": {
+        "name": "[киномания] BEG",
+        "date_str": "19 сентября, Суббота",
+        "date": "2026-09-19T16:00:00",
+        "standard": false,
+        "poll_id": 8387,
+        "notified": true
+    },
+    "01a03993-1acb-71c3-b195-d3004b90a24b": {
+        "name": "[верните мой 2007] BEG",
+        "date_str": "22 сентября, Вторник",
+        "date": "2026-09-22T19:30:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
+    },
+    "01a03995-fef4-7251-b4b6-5e446cee0b4b": {
+        "name": "[кино и TV] 2000-е BEG",
+        "date_str": "26 сентября, Суббота",
+        "date": "2026-09-26T16:00:00",
+        "standard": false,
+        "poll_id": 8388,
+        "notified": false
+    },
+    "01a03998-e9c8-726a-b011-355fc3964032": {
+        "name": "Квиз, плиз! BEG",
+        "date_str": "29 сентября, Вторник",
+        "date": "2026-09-29T19:30:00",
+        "standard": true,
+        "poll_id": 0,
+        "notified": false
     }
 }
