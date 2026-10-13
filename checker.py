@@ -29,14 +29,38 @@ headers = {
     "Accept": "application/json, text/plain, */*"
 }
 
+r = None
 try:
     r = requests.get(api_url, headers=headers, timeout=10)
-    res_json = r.json()
-    games = res_json.get("data", {}).get("data", [])
-except Exception as e:
+    r.raise_for_status()
+    try:
+        res_json = r.json()
+    except ValueError as e:
+        raise ValueError(
+            f"API вернул не JSON (HTTP {r.status_code}, "
+            f"Content-Type: {r.headers.get('Content-Type', 'не указан')})"
+        ) from e
+
+    if not isinstance(res_json, dict) or res_json.get("status") != "ok":
+        raise ValueError("API вернул ошибку или неожиданный формат ответа")
+    schedule = res_json.get("data")
+    if not isinstance(schedule, dict) or not isinstance(schedule.get("data"), list):
+        raise ValueError("В ответе API отсутствует список игр data.data")
+    games = schedule["data"]
+    if any(not isinstance(game, dict) or not game.get("id") for game in games):
+        raise ValueError("В расписании API есть некорректная игра или отсутствует id")
+except (requests.RequestException, ValueError) as e:
     print(f"Ошибка при получении расписания через API: {e}")
+    if r is not None:
+        print(
+            f"Ответ API: HTTP {r.status_code}; URL: {r.url}; "
+            f"Content-Type: {r.headers.get('Content-Type', 'не указан')}"
+        )
+        # Ограничиваем HTML страницы ошибки и убираем переводы строк из лога.
+        preview = " ".join(r.text[:500].split())
+        print(f"Начало ответа API: {preview or '(пустой ответ)'}")
     print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Завершение работы (ошибка).")
-    sys.exit(0)
+    sys.exit(1)
 
 if not games:
     print("Игры в расписании не найдены.")
